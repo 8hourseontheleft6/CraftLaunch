@@ -9,8 +9,25 @@
     "dev:electron": "vite build && electron .",
     "build": "tsc -b && vite build",
     "build:electron": "tsc -b && vite build && tsc -p tsconfig.electron.json",
+    "pack": "npm run build:electron && electron-builder --win --dir",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.craftlaunch.app",
+    "productName": "CraftLaunch",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "asar": false,
+    "win": {
+      "target": "portable",
+      "icon": null
+    }
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",

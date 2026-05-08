@@ -2,5 +2,6 @@ node_modules/
 dist/
 dist-electron/
 .vite/
+release/
 *.local
 .DS_Store
