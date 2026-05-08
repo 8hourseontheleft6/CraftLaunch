@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --titlebar-height: 32px;
+  --titlebar-height: 40px;
 }
 
 * {
